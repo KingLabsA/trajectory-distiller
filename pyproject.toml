@@ -10,10 +10,10 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 dependencies = [
-    "click>=8.0",
-    "pydantic>=2.0",
-    "datasets>=2.14",
-    "rich>=13.0",
+    "click>=8.1.0",
+    "pydantic>=2.7.0",
+    "datasets>=2.20.0",
+    "rich>=13.7.0",
 ]
 
 [project.scripts]
@@ -26,8 +26,11 @@ dev = ["pytest>=7.0", "pytest-cov", "ruff"]
 where = ["src"]
 
 [tool.ruff]
-line-length = 100
+line-length = 120
 target-version = "py310"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.ruff.lint]
+ignore = ["E501"]
